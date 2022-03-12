@@ -12,7 +12,7 @@
     --mercury: #e8e8e8;
     --mariner: #3A97D4;
     --genoa: #20A672;
-    --mojo: #C44B34;
+    --mojo: #A44B34;
     --rajah: #F7CE74;
 
     /* Spacing */
@@ -76,7 +76,7 @@ header {
     align-items: center;
 }
 
-header > img {
+header img {
     max-width: 3rem;
 }
 
