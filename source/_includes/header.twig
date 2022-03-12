@@ -6,16 +6,15 @@
     <meta name="description" content="Static site generation with translations and images.">
     <meta name="author" content="@dreadnip">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 </head>
 <body>
     <header>
-        <img src="assets/images/logo.png" alt="Jug logo"/>
+        <a href="index"><img src="{{ asset('assets/images/logo.png') }}" alt="Jug logo"/></a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="about">About</a>
+            <a href="contact">Contact</a>
         </nav>
         {% include 'languages.twig' %}
     </header>
