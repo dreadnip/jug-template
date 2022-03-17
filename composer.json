@@ -1,6 +1,7 @@
 {
     "require": {
         "php": "^8.1",
-        "dreadnip/jug": "dev-master"
+        "dreadnip/jug": "dev-master",
+        "michelf/php-markdown": "^1.9"
     }
 }

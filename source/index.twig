@@ -2,10 +2,22 @@
 
 {% block main %}
     <section id="intro">
-        <h1>{{ 'Home'|trans }}</h1>
+        <h1>{{ 'Jug'|trans }}</h1>
+        <p>Jug is a static website toolkit. It transforms Twig templates with hardcoded content into HTML.</p>
+        <p>It does <strong>not</strong> load content through Markdown. All content is entered straight into the templates.</p>
+        <p>On top of the basic Twig to HTML workflow, it also does the following things:</p>
+        <ul>
+            <li>compresses/optimizes any images on the site</li>
+            <li>adds a build-specific hash to all assets for easy cache-busting on deploy</li>
+            <li>translates any content that is tagged with the `trans` Twig filter</li>
+            <li>if multiple locales are configured, it generates a version of the site in each locale</li>
+        </ul>
+        <p>Since the templates are built in Twig, you get access to blocks, includes, basic Twig filters and more. There is also a configuration file in basic PHP format, which you have access to in every template.</p>
+        <p>This is an educational project only intended for personal use.</p>
+        {{ markdown('example.md') }}
         <figure>
             <img src="{{ asset('assets/images/monkeys.jpg') }}" alt="monkeys"/>
-            <figcaption>A bunch of monkeys</figcaption>
+            <figcaption>I'm {{ asset('assets/images/monkeys.jpg') }}, and I'm suffixed with a hash for easy cache-busting.</figcaption>
         </figure>
     </section>
 {% endblock %}

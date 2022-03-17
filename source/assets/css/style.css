@@ -33,12 +33,17 @@ body {
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    padding: var(--default);
+    width: 60rem;
+    margin: 0 auto;
 }
 
 /*
  * Basics
  */
+
+p {
+    max-width: 40rem;
+}
 
 h1, h2, h3, h4, h5 {
     line-height: 1;
@@ -46,7 +51,11 @@ h1, h2, h3, h4, h5 {
 
 a {
     display: inline-block;
-    color: var(--mojo);
+    color: var(--mariner);
+}
+
+ul {
+    margin-left: 2rem;
 }
 
 h1 {
@@ -70,8 +79,6 @@ figcaption {
 
 header {
     padding: var(--default);
-    background-color: var(--mercury);
-    color: var(--mine-shaft);
     display: flex;
     align-items: center;
 }
@@ -81,7 +88,7 @@ header img {
 }
 
 nav {
-    margin-left: 2rem
+    margin-left: auto;
 }
 
 nav a + a {
@@ -89,7 +96,6 @@ nav a + a {
 }
 
 .language-dropdown {
-    justify-self: flex-end;
     margin-left: 3rem;
 }
 
@@ -104,8 +110,6 @@ main * + * {
 footer {
     display: flex;
     padding: var(--default);
-    background-color: var(--mine-shaft);
-    color: var(--mercury);
 }
 
 footer * + * {
@@ -116,11 +120,18 @@ footer * + * {
  * Mobile
  */
 
+@media screen and (max-width: 60rem) {
+    body {
+        max-width: 40rem;
+    }
+}
+
 @media screen and (max-width: 40rem) {
     body {
         padding: var(--half);
         font-size: 1.2rem;
         flex-direction:  column;
+        max-width: 100%;
     }
 
     header {
