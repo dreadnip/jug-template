@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Jug</title>
-    <meta name="description" content="Static site generation with translations and images.">
-    <meta name="author" content="@dreadnip">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+  <meta charset="utf-8">
+  <title>Jug</title>
+  <meta name="description" content="Static site generation with translations and images.">
+  <meta name="author" content="@dreadnip">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="{{ asset('assets/images/logo.png') }}" alt="Jug logo"/></a>
-        <nav>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        {% include 'languages.twig' %}
-    </header>
+  <header>
+    <a href="/index.html"><img src="{{ asset('assets/images/logo.png') }}" alt="Jug logo"/></a>
+  </header>

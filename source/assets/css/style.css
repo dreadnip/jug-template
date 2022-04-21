@@ -22,6 +22,8 @@
     --half: calc(var(--default) / 2);
     --in-between: 1.25rem;
     --small: .5rem;
+
+    --width: 45rem;
 }
 
 body {
@@ -41,12 +43,12 @@ body {
  * Basics
  */
 
-p {
-    max-width: 40rem;
+p, ul, ol {
+    max-width: var(--width);
 }
 
 h1, h2, h3, h4, h5 {
-    line-height: 1;
+    line-height: 1.1;
 }
 
 a {
@@ -59,7 +61,7 @@ ul {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 h2 {
@@ -75,6 +77,21 @@ img {
 figcaption {
     font-size:  1.2rem;
     color: #a2a2a2;
+}
+
+code {
+    background: #e8e8e8;
+    border-radius: 5px;
+    padding: .2rem .5rem;
+    font-size: .9rem;
+    white-space: pre;
+}
+
+.block {
+    display: block;
+    overflow: auto;
+    padding-left: 2rem;
+    max-width: var(--width);
 }
 
 header {
@@ -103,17 +120,39 @@ main {
     padding: var(--default);
 }
 
-main * + * {
+main > * + * {
     margin-top: 2rem;
 }
 
 footer {
+    border-top: solid 4px var(--rajah);
     display: flex;
-    padding: var(--default);
+    margin: 0 var(--default);
+    padding: var(--default) 0;
+    align-items: center;
+}
+
+footer p {
+    line-height: 1;
 }
 
 footer * + * {
     margin-left: 1rem;
+}
+
+footer img {
+    max-height: 24px;
+    opacity: .5;
+    transition: 200ms;
+}
+
+footer img:hover {
+    opacity: 1;
+}
+
+aside {
+    color: #454545;
+    font-style: italic;
 }
 
 /*
@@ -122,24 +161,28 @@ footer * + * {
 
 @media screen and (max-width: 60rem) {
     body {
-        max-width: 40rem;
+        max-width: var(--width);
     }
 }
 
 @media screen and (max-width: 40rem) {
     body {
-        padding: var(--half);
         font-size: 1.2rem;
-        flex-direction:  column;
+        flex-direction: column;
         max-width: 100%;
     }
 
     header {
-        padding-left: 0;
+        padding: var(--half);
     }
 
     main {
-        padding-left: 0;
+        padding: var(--half);
+    }
+
+    footer {
+        margin: 0 var(--half);
+        padding: var(--half) 0;
     }
 }
 
